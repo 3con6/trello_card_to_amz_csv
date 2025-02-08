@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    image: registry.gitlab.com/nb-team/trello2xlsm_amz:v1
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "10m"  
